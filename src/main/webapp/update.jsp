@@ -11,11 +11,11 @@
 <body>
  <%@ include file="./page/navbar.jsp" %><br>
             <%
-
+            String id=request.getParameter("id");
             try
             {
                 DbConnection dbConnection2 = new DbConnection("jdbc:mysql://localhost:3306/thetododb","root","");
-                String query = "Select * from todos";
+                String query = "Select * from todos where id ="+id;
                 Statement statement = dbConnection2.connect().createStatement();
                 ResultSet result = statement.executeQuery(query);
                 while(result.next())
