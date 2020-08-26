@@ -1,5 +1,4 @@
 todo/db/DbConnection.class
-todo/servlets/ShowServlet.class
 todo/model/Todo.class
 todo/servlets/UploadToDoServlet.class
 todo/db/DatabaseBootstrap.class

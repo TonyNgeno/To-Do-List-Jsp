@@ -1,7 +1,7 @@
 package todo.model;
 
 public class Todo {
-
+    private int id;
     private String title;
     private String description;
 
@@ -19,5 +19,13 @@ public class Todo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

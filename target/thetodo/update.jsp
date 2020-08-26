@@ -23,6 +23,7 @@
 
                 %>
                <form method="post" action="update-process.jsp">
+                    <input type="text" hidden=true class="form-control" name="id" value="<%=result.getString("id") %>">
 
                     <div class="form-group">
                       <label for="InputTitle">Title</label>

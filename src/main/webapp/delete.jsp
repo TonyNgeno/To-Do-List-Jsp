@@ -9,6 +9,7 @@ String query = "Select * from todos";
 Statement statement = dbConnection2.connect().createStatement();
 int i=statement.executeUpdate("DELETE FROM todos WHERE id="+id);
 out.println("Data Deleted Successfully!");
+response.sendRedirect("todo.jsp");
 }
 catch(Exception e)
 {

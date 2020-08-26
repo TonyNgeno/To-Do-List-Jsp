@@ -18,19 +18,19 @@
 			<th>Action</th>
 		</tr>
             <%
-
             try
             {
                 DbConnection dbConnection2 = new DbConnection("jdbc:mysql://localhost:3306/thetododb","root","");
                 String query = "Select * from todos";
                 Statement statement = dbConnection2.connect().createStatement();
                 ResultSet result = statement.executeQuery(query);
+                int count = 0;
                 while(result.next())
                 {
-
+                count += 1;
                 %>
                 <tr>
-                <td><%=result.getInt("id")%></td>
+                <td><%=count%></td>
                 <td><%=result.getString("title")%></td>
                 <td><%=result.getString("description")%></td>
                 <td>
