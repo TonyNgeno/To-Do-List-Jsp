@@ -22,7 +22,7 @@
                 {
 
                 %>
-               <form method="post" action="updateServlet">
+               <form method="post" action="update-process.jsp">
 
                     <div class="form-group">
                       <label for="InputTitle">Title</label>

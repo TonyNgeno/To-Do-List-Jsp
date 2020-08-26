@@ -7,12 +7,12 @@ String description=request.getParameter("description");
 try
 {
 DbConnection dbConnection2 = new DbConnection("jdbc:mysql://localhost:3306/thetododb","root","");
-String query = "Update todos set title=?,description=? where id="+id;
-PreparedStatement statement = dbConnection2.connect().prepareStatement(query);
-statement.setString(1,title);
-statement.setString(2, description);
+PreparedStatement statement = dbConnection2.connect().prepareStatement("Update todos  set id =?, title=?,description=?  WHERE id="+id);
+statement.setString(1,id);
+statement.setString(2,title);
+statement.setString(3,description);
 statement.executeUpdate();
-
+out.println("Data Updated Successfully!");
 }
 catch(Exception e)
 {
