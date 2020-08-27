@@ -27,9 +27,7 @@ sudo mvn clean compile package wildfly:deploy
 
 ## Running
 
-```bash
-http://localhost:8080/thetodo/
-```
+(http://localhost:8080/thetodo/)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
