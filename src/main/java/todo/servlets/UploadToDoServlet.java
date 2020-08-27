@@ -62,7 +62,7 @@ public class UploadToDoServlet extends HttpServlet {
             statement.setString(2, description);
             statement.executeUpdate();
 
-            response.sendRedirect("todo.jsp");
+            response.sendRedirect("index.jsp");
 
         }catch (SQLException sqlEx){
             sqlEx.printStackTrace();

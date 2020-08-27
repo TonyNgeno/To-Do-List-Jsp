@@ -9,7 +9,7 @@ try
 DbConnection dbConnection2 = new DbConnection("jdbc:mysql://localhost:3306/thetododb","root","");
 Statement statement = dbConnection2.connect().createStatement();
 statement.executeUpdate("update todos set title = \""+title+"\", description = \""+description+"\" where id = "+id+";");
-response.sendRedirect("todo.jsp");
+response.sendRedirect("index.jsp");
 }
 catch(Exception e)
 {
