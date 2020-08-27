@@ -12,12 +12,14 @@
  <%@ include file="./page/navbar.jsp" %><br>
 	<table class = "table table-bordered table-stripped table-condensed" align = "center">
 		<tr>
-		    <th>No</th>
-			<th>Title</th>
-			<th>Description</th>
-			<th>Action</th>
+		    <thead class="thead-dark">
+                <th scope="col">No</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </thead>
 		</tr>
-		            <a href="add.jsp"><button type="button" class="add">Add To Do Task</button></a><br><br>
+		            <a href="add.jsp"><button type="button"  class="btn btn-primary" onclick="return confirm('Are you sure you want to add a new todo?')" >Add To Do Task</button></a><br><br>
             <%
             try
             {
@@ -37,8 +39,8 @@
                 <td><%=result.getString("title")%></td>
                 <td><%=result.getString("description")%></td>
                 <td>
-                    <a href="update.jsp?id=<%=result.getString("id") %>"><button type="button" class="edit">Edit</button></a>
-                    <a href="delete.jsp?id=<%=result.getString("id") %>"><button type="button" class="delete">Delete</button></a>
+                    <a href="update.jsp?id=<%=result.getString("id") %>"><button type="button"  class="btn btn-primary" onclick="return confirm('Are you sure you want to edit this record?')">Edit</button></a>
+                    <a href="delete.jsp?id=<%=result.getString("id") %>"><button type="button" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button></a>
                 </td>
 
                 </tr>

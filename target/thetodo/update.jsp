@@ -22,21 +22,25 @@
                 {
 
                 %>
-               <form method="post" action="update-process.jsp">
-                    <input type="text" hidden=true class="form-control" name="id" value="<%=result.getString("id") %>">
+                <div class = "container">
+                   <h1 align="center"> Edit A To Do<h1><br>
+                   <form method="post" action="update-process.jsp">
+                        <input type="text" hidden=true class="form-control" name="id" value="<%=result.getString("id") %>">
 
-                    <div class="form-group">
-                      <label for="InputTitle">Title</label>
-                      <input type="text" class="form-control" name="title" value="<%=result.getString("title") %>">
-                    </div>
+                        <div class="form-group">
+                          <label for="InputTitle" class="grey-text font-weight-light">Title</label>
+                          <input type="text" class="form-control" name="title" value="<%=result.getString("title") %>">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="InputTitle">Description</label>
-                        <input type="text" class="form-control" name="description" value="<%=result.getString("description") %>">
-                    </div>
+                        <div class="form-group">
+                            <label for="InputTitle" class="grey-text font-weight-light">Description</label>
+                            <input type="text" class="form-control" name="description" value="<%=result.getString("description") %>">
+                        </div>
 
-                     <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+                         <button type="submit" class="btn btn-primary">Submit</button>
+                         <a href="index.jsp"><button type="button"  class="btn btn-success"> Return Home</button></a>
+                      </form>
+                   </div>
                 <%
 
                 }
